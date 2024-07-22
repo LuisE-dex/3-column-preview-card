@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+body{
+    font-size: 15px;
+    background-color: var(--veryLightGray);
+}
+h1{
+    color: var(--veryLightGray);
+    margin: 28px 0 15px 0;
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+p{
+    color: var(--transparentWhite);
+    line-height: 23px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+/*--------cards--------*/
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    margin: 87px auto;
+    border-radius: 10px;
+}
+.container .cards{
+    height: 440px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 55px 0 47px;
+    overflow: hidden;
+}
+.container .sedans{
+    background-color: var(--brightOrange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container .suvs{
+    background-color: var(--darkCyan);
+}
+.container .luxury{
+    background-color: var(--veryDarkCyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/*---------buttons--------*/
+button{
+    background-color: var(--veryLightGray);
+    border: none;
+    height: 47px;
+    width: 145px;
+    border-radius: 25px;
+    margin-top: 25px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: .3s ease-in-out;
+}
+
+#sedans{
+    color: var(--brightOrange);
+}
+#suvs{
+    color: var(--darkCyan);
+}
+#luxury{
+    color: var(--veryDarkCyan);
+}
+#sedans:hover{
+    border: 2px solid var(--veryLightGray);
+    color: var(--veryLightGray);
+    background-color: rgba(0, 0, 0, 0);
+    transform: .3se;
+    cursor: pointer;
+}
+#suvs:hover{
+    border: 2px solid var(--veryLightGray);
+    color: var(--veryLightGray);
+    background-color: rgba(0, 0, 0, 0);
+    transform: .3se;
+    cursor: pointer;
+}
+#luxury:hover{
+    border: 2px solid var(--veryLightGray);
+    color: var(--veryLightGray);
+    background-color: rgba(0, 0, 0, 0);
+    transform: .3se;
+    cursor: pointer;
+}
+
+
+/*-------MQ_to_destok-------*/
+@media screen and (min-width: 1200px){
+    .container{
+        width: 920px;
+        flex-direction: row;
+    }
+    .container .sedans{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .container .luxury{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+/*-------footer------*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--veryDarkCyan);
+}
